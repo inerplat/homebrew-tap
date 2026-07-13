@@ -2,10 +2,10 @@ class Idleloom < Formula
   desc "Use an idle Apple Silicon Mac as Kubernetes Native Metal compute"
   homepage "https://github.com/inerplat/idleloom"
   url "https://github.com/inerplat/idleloom/releases/download/v0.1.0-alpha.2/idleloom-v0.1.0-alpha.2-darwin-arm64.tar.gz"
-  version "0.1.0-alpha.2"
   sha256 "77a162af6e4e150d8a1cbe04b7dc26fa4a5eb2e1157e6f83f153a6e4a911de82"
   license "Apache-2.0"
 
+  depends_on :macos
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
