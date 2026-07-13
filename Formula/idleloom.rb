@@ -5,7 +5,6 @@ class Idleloom < Formula
   sha256 "77a162af6e4e150d8a1cbe04b7dc26fa4a5eb2e1157e6f83f153a6e4a911de82"
   license "Apache-2.0"
 
-  depends_on :macos
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
