@@ -1,16 +1,15 @@
 class Idleloom < Formula
   desc "Use an idle Apple Silicon Mac as Kubernetes Native Metal compute"
   homepage "https://github.com/inerplat/idleloom"
-  url "https://github.com/inerplat/idleloom/releases/download/v0.1.0-alpha.2/idleloom-v0.1.0-alpha.2-darwin-arm64.tar.gz"
-  sha256 "77a162af6e4e150d8a1cbe04b7dc26fa4a5eb2e1157e6f83f153a6e4a911de82"
+  url "https://github.com/inerplat/idleloom/releases/download/v0.1.1/idleloom-v0.1.1-darwin-arm64.tar.gz"
+  sha256 "6b816c66957c715d076c9fd67d8301c2a42f0a0ba85eaa339b5c3d31c77fa7d9"
   license "Apache-2.0"
 
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
   def install
-    libexec.install "idlectl", "idleloom-agent", "idleloom-controller",
-                    "idleloom-link", "idleloom-projection", "LICENSE"
+    libexec.install "idlectl", "LICENSE"
     bin.write_exec_script libexec/"idlectl"
   end
 
