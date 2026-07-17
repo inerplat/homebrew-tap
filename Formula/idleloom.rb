@@ -1,9 +1,9 @@
 class Idleloom < Formula
   desc "Use an idle Apple Silicon Mac as Kubernetes Native Metal compute"
   homepage "https://github.com/inerplat/idleloom"
-  url "https://github.com/inerplat/idleloom/releases/download/v0.1.1/idleloom-v0.1.1-darwin-arm64.tar.gz"
-  version "0.1.1"
-  sha256 "6b816c66957c715d076c9fd67d8301c2a42f0a0ba85eaa339b5c3d31c77fa7d9"
+  url "https://github.com/inerplat/idleloom/releases/download/v0.1.2/idleloom-v0.1.2-darwin-arm64.tar.gz"
+  version "0.1.2"
+  sha256 "fb487c481f1cd5aa1383b71ebab7377a07318966772c2586811c92e56ab51dd0"
   license "Apache-2.0"
 
   depends_on arch: :arm64
@@ -24,5 +24,6 @@ class Idleloom < Formula
 
   test do
     assert_match "idlectl v#{version}", shell_output("#{bin}/idlectl version")
+    assert_match "Usage of maintain:", shell_output("#{bin}/idlectl worker maintain --help 2>&1")
   end
 end
